@@ -30,6 +30,36 @@ class _HomescreenState extends State<Homescreen> {
             child: InkWell(
               onTap: () {
                 setState(() {
+                  i = 0;
+                });
+              },
+              child: Container(
+                height: 30,
+                width: 30,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Colors.black),
+                ),
+                child: Text(
+                  "0",
+                  style: TextStyle(
+                    color: Colors.red.shade700,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 15,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          Align(
+            child: InkWell(
+              onTap: () {
+                setState(() {
                   i--;
                 });
               },
